@@ -29,27 +29,26 @@ VALUES
 
 #For this project, I used SQL to query the Superstore database to get information about items sold at the store and their prices. 
 
--- Order items by price 
+# Order items by price 
 -- Looking at item names and price
 SELECT item_name, price
 FROM superstore
 ORDER BY price;
 
--- Shows a statistic about item prices (Average of all item prices in the superstore)
+# Shows a statistic about item prices (Average of all item prices in the superstore)
 -- Looking at AVG and price
 SELECT AVG(price)
 FROM superstore;
 
---  Shows a statistic about the price for items in the category of "Kitchen Supplies" (MAX/Highest item price in Kitchen Supplies)
+# Shows a statistic about the price for items in the category of "Kitchen Supplies" (MAX/Highest item price in Kitchen Supplies)
 -- Looking at MAX price WHERE category is "Kitchen Supplies"
 SELECT MAX(price), category
 FROM superstore
 WHERE category = "Kitchen Supplies";
 
--- My Question: Which items have an average rating of 4.5 or greater? 
+# Shows items that have an average rating of 4.5 or greater? 
 -- Looking at item names and average_rating that equals 4.5+
--- Order the items from highest average rating to lowest.
--- Looking at ORDER by DESC 
+-- Order the items from highest average rating to lowest. 
 SELECT item_name, average_rating
 FROM superstore
 WHERE average_rating >= 4.5
